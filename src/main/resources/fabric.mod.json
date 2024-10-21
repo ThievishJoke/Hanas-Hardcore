@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "hanas_hardcore",
+	"version": "${version}",
+	"name": "Hanas Hardcore",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hanas_hardcore/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hanas_hardcore.HanasHardcore"
+		],
+		"client": [
+			"net.hanas_hardcore.HanasHardcoreClient"
+		],
+		"fabric-datagen": [
+			"net.hanas_hardcore.HanasHardcoreDataGenerator"
+		]
+	},
+	"mixins": [
+		"hanas_hardcore.mixins.json",
+		{
+			"config": "hanas_hardcore.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
